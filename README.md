@@ -9,7 +9,7 @@ Clone this project and enter to project folder
 
 
 ### Install Vagrant
-(download link)[https://www.vagrantup.com/downloads]
+[Download link](https://www.vagrantup.com/downloads)
 
 :+1: **Check point:**
 ```
@@ -22,7 +22,7 @@ You're running an up-to-date version of Vagrant!
 
 
 ### Install VirtualBox
-(download link)[https://www.virtualbox.org/wiki/Downloads]
+[Download link](https://www.virtualbox.org/wiki/Downloads)
 
 ### Start Vagrant
 ```
