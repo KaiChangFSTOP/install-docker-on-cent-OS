@@ -1,0 +1,52 @@
+version: '3.4'
+services:
+  java:
+    image:
+      192.168.5.11:5000/simple-java-app
+    ports:
+      - target: 8080
+        published: 9081
+        protocol: tcp
+        mode: ingress
+    deploy:
+      mode: replicated
+      replicas: 2
+      # update_config:
+      #   order: start-first
+      #   parallelism: 1
+      #   delay: 20s
+      # placement:
+      #   constraints:
+      #     - node.role == worker
+  httpd:
+    image:
+      192.168.5.11:5000/httpd:2.4.46-alpine
+    ports:
+      - target: 80
+        published: 9100
+        protocol: tcp
+        mode: ingress
+    deploy:
+      mode: replicated
+      replicas: 1
+      # placement:
+      #   constraints:
+      #     - node.role == worker
+  viz:
+    image:
+      dockersamples/visualizer
+    volumes:
+      - type: bind
+        source: /var/run/docker.sock
+        target: /var/run/docker.sock
+    ports:
+      - target: 8080
+        published: 9000
+        protocol: tcp
+        mode: ingress
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.role == manager
