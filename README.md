@@ -5,6 +5,9 @@ install vagrant and docker on cent OS
 
 ## Setup cent OS 7 Environment
 
+
+:exclamation: **If you are Windows user, please disable HyperV** :exclamation:
+
 Clone this project and enter to project folder
 
 
