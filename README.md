@@ -129,10 +129,12 @@ $ chmod -R 755 docker.sock
 $ systemctl enable docker
 ```
 
-### Reboot to apply the change
+### Restart docker to apply the change
 ```
-$ reboot
+$ systemctl restart docker
 ```
+If it cannot work, just reboot VM
+
 
 ### Check docker version
 ```
