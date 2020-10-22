@@ -40,7 +40,7 @@ $ vagrant ssh node-2
 :+1: **Check point:** 
 In each VM, type below command
 ```
-$ $ cat /etc/os-release 
+$ cat /etc/os-release 
 NAME="CentOS Linux"
 VERSION="7 (Core)"
 ID="centos"
