@@ -109,7 +109,7 @@ $ systemctl stop firewalld
 
 ### Setup registry parameter
 ```
-$ vi /etcdocker/daemon.json
+$ vi /etc/docker/daemon.json
 { "insecure-registries":["192.168.5.11:5000"] }
 ```
 
